@@ -4,6 +4,7 @@
 using namespace std;
 
 
+
 class Tarjeta { 
 
   private: //Declaración de variables
@@ -15,8 +16,14 @@ class Tarjeta {
     Tarjeta(int id, string name, string password){
       identificacion = id;
       nombre = name;
-      contrasena = password; }
+      contrasena = password;
+  }
 
+Tarjeta(){
+  identificacion = 0;
+  nombre = "";
+  contrasena = "";
+}
   //Getter de id, nombre y constrasena
   int getIdentificacion(){
       return identificacion;
@@ -28,7 +35,6 @@ class Tarjeta {
   string getContrasena() {
       return contrasena;
   }
-
 
   void setNombre(string name){
     nombre = name;

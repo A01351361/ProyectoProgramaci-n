@@ -6,7 +6,7 @@ using namespace std;
 
 
 //Declaración de objeto balance de dinero que hereda de Tarjeta
-class Balance{
+class Balance : public Tarjeta{
   private:
     int cuenta; //Balance numeros flotantes
     
@@ -28,6 +28,9 @@ class Balance{
 
   void recarga (int recarga){ //recarga de la cuenta
     cuenta = cuenta + recarga;
+  }
+  void pagar (int pagar){
+    cuenta = cuenta - pagar;
   }
 
 };

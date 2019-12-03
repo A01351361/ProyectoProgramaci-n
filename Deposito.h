@@ -1,8 +1,8 @@
 #ifndef DEPOSITO_H //Definir clase, gerencia, archivo
 #define DEPOSITO_H
 #include <iostream>
+using namespace std;
 #include "balance.h"
-#include "Tarjeta.h"
 
 using namespace std;
 

@@ -24,7 +24,9 @@ using namespace std;
 int opcion; //Opciones en enteros
 int opc1; //Opciones
 int opc2; //Opciones
+int opc3;
 int dep; //Definir variable deposito
+int pag;
 int ide; //Definir variable identificacion solo enteros
 string con; //Definir variable contraseña solo numeros enteros
 int cuenta = 0;
@@ -43,6 +45,7 @@ int main (){
   Reward Erick(5,"Chai Helado", "Jarabe extra"); //Objeto reward de las visitas
   Tarjeta cliente(ide, "Erick Calderón", con); //Objeto de registro
   Deposito r(dep); // Objeto de deposito
+  Pago p(pag);
   Balance cuenta(1000); //Objeto de balance de dinero en la cuenta
   
 
@@ -54,6 +57,7 @@ int main (){
   cout<< "1. Balance"<<endl ;
   cout<< "2. Visitas"<<endl ;
   cout<< "3. Promociones"<<endl ;
+   cout<< "4. Pago"<<endl ;
   cin >> opcion;
     // La opcion 1 es para ver el balance de tu cuenta, que en este caso el predeterminado de 1000, sin embargo se puede hacer depositos.
     if (opcion == 1){
@@ -98,6 +102,16 @@ int main (){
       else if (opcion == 3){
         cout << endl << "Por el momento no contamos con promociones.";
       }
+      else if (opcion == 4){
+        cout << "Escogiste pagar tu comida "<< endl;
+        cout <<endl<< "Escribe la cantidad a pagar"<< endl;
+      cin >> dep;
+                if (dep > 0){
+                  cuenta.pagar(dep); //Intento de recarga de deposito, sin embargo no funciono, a trabajar en la semana.
+                  cout << endl << "Tu nuevo balance es " << (cuenta.getCuenta())<<endl;}
+                else{
+                  cout << endl << "No es un numero entero"<<endl;}
+       }
   
 };
 

@@ -1,7 +1,10 @@
 #ifndef REWARD_H//Definir clase, gerencia, archivo
 #define REWARD_H
+#include "Visitas.h"
+#include <iostream>
+using namespace std;
 //Apartado de clase a rewards por visitas, cliente frecuente.
-class Reward {
+class Reward : public Visitas {
   private:
     int visitas; //Numero de visitas
     string bebida; // Bebida a escoger en rewards a de visitas canjeables
