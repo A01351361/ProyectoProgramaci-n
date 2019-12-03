@@ -1,2 +1,2 @@
-# ProyectoProgramaci-n
+# ProyectoProgramacion
 Proyecto orientado a objetos
